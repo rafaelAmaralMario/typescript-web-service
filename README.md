@@ -13,7 +13,7 @@ Web service in Node.Js and TypeScript using postgresql as database.
 
 ## Author
 
-- **Rafael Mario**
+- **Rafael do Amaral Mario**
 
 ## License
 
