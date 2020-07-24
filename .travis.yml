@@ -10,7 +10,7 @@ env:
   - NODE_ENV: test
   - TRAVIS: true
 addons:
-  postgresql: '12.2'
+  postgresql: '9.6'
 before_script:
 - pg_lsclusters
 - psql -c 'create database ts_api_test;' -U postgres
