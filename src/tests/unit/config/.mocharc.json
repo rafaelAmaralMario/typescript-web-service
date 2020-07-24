@@ -1,0 +1,12 @@
+{
+  "diff": true,
+  "extension": ["js"],
+  "package": "./package.json",
+  "require": "./dist/tests/unit/config/helpers",
+  "reporter": "nyan",
+  "slow": 5000,
+  "watch-files": ["tests/**/*.js", "tests/*.js"],
+  "watch-ignore": ["node_modules"],
+  "color": true,
+  "fullTrace": true
+}
