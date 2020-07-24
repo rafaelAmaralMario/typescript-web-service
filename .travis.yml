@@ -12,7 +12,6 @@ env:
 addons:
   postgresql: '12.2'
 before_script:
-- service postgresql start -U postgres
 - pg_lsclusters
 - psql -c 'create database ts_api_test;' -U postgres
 - npm i -g sequelize-cli gulp-cli
