@@ -6,7 +6,7 @@ export const tsProject = ts.createProject('tsconfig.json');
 
 export const compile = () => tsProject.src().pipe(tsProject()).js.pipe(gulp.dest('dist'));
 
-export const cleanTask = () => gulp.src('dist').pipe(clean());
+export const cleanTask = () => gulp.src('dist', { allowEmpty: true }).pipe(clean());
 
 export const copydbConfigFile = () => gulp.src('src/server/config/config.json').pipe(gulp.dest('dist/server/config'))
 
