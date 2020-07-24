@@ -1,7 +1,6 @@
-import { testDouble, expect } from './config/helpers';
+import { expect } from './config/helpers';
 import User from '../../server/modules/user/service';
-import UserController from '../../server/modules/user/controller';
-import { IUser, IUserDetail } from '../../server/modules/user/interface';
+import { IUser } from '../../server/modules/user/interface';
 
 const model = require('../../server/models');
 
@@ -23,14 +22,14 @@ beforeEach((done) => {
     .destroy({
       where: {},
     })
-    .then(() => {
+    .then(async () => {
       model.User.create(userDefault).then(() => {
         done();
       });
     });
 });
 
-describe('Controller unit tests', () => {
+describe('User Controller unit tests', () => {
   describe('Create Method Test', () => {
     it('Should Create a new user', () => {
       const newUser = {

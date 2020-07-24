@@ -7,9 +7,9 @@
     "start": "PORT=5000 NODE_ENV=dev ./node_modules/.bin/ts-node ./src/server/server.ts",
     "builded": "PORT=5000 NODE_ENV=prod node ./dist/server/server.js",
     "QI": "tsc && NODE_ENV=prod node ./dist/server/server.js",
-    "unit-test": "NODE_ENV=test mocha --config ./src/tests/unit/config/.mocharc.json ./dist/tests/unit/unit.test.js",
+    "unit-test": "NODE_ENV=test mocha --config ./src/tests/unit/config/.mocharc.json ./dist/tests/unit/*",
     "unit-cover": "nyc --reporter=html yarn integration-test",
-    "integration-test": "NODE_ENV=test mocha --config ./src/tests/integration/config/.mocharc.json ./dist/tests/integration/integration.test.js",
+    "integration-test": "NODE_ENV=test mocha --config ./src/tests/integration/config/.mocharc.json ./dist/tests/integration/*",
     "integration-cover": "nyc --reporter=html yarn integration-test"
   },
   "keywords": [
