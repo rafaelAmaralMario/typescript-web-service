@@ -1,7 +1,6 @@
 # Web Service with Node TypeScript Postgres
 
 Web service in Node.Js and TypeScript using postgresql as database.
-
 [![Build Status](https://travis-ci.org/rafaelAmaralMario/typescript-web-service.svg?branch=master)](https://travis-ci.org/rafaelAmaralMario/typescript-web-service)
 
 ## Built With
