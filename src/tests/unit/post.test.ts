@@ -16,7 +16,7 @@ before((done) => {
   model.sequelize.sync().then(() => {
     model.Author.destroy({
       where: {},
-    }).then(async () => {
+    }).then(() => {
       model.Author.create(authorDefault).then(() => {
         done();
       });
@@ -38,14 +38,13 @@ describe("Post Controller unit tests", () => {
   describe("Create Method Test", () => {
     it("Should Create a new Post", () => {
       const newPost = {
+        id: 2,
         title: "New Post",
         text: "new Text",
         authorId: authorDefault.id,
       };
 
       return Post.createPost(newPost).then((data) => {
-        console.log("POST DATA:", data);
-
         expect(data.dataValues).to.have.all.keys([
           "id",
           "title",
